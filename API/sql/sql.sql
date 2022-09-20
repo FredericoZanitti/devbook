@@ -12,3 +12,6 @@ CREATE TABLE usuarios (
     criadoEm timestamp default current_timestamp()
 ) ENGINE=INNODB;
 
+CREATE USER 'golang'@'localhost' IDENTIFIED BY 'golang';
+
+GRANT ALL PRIVILEGES ON devbook.* TO 'golang'@'localhost';
